@@ -146,4 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d85c917f629b77b47805972a8c9fa989, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackSpeed: 50000
+  bulletRB: {fileID: 581404260391390628}
+  attackSpeed: 10
+  currentTime: 0
+  decayTime: 3

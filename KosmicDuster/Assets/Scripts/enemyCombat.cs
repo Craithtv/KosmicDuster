@@ -5,6 +5,7 @@ using UnityEngine;
 public class enemyCombat : MonoBehaviour
 {
     [SerializeField] int enemyHp;
+    public float attackRadius;
     // Start is called before the first frame update
     void Start()
     {

@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float playerSpeed = 5f;
     Rigidbody2D playerRB;
     float horizontal;
+    public int playerHp = 10;
 
 
     // Start is called before the first frame update
@@ -21,6 +22,12 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         MovePlayer();
+        DeathCheck();
+    }
+    private void DeathCheck()
+    {
+        if (playerHp <= 0)
+        { Destroy(this.gameObject); }
     }
 
     void MovePlayer()
@@ -28,5 +35,12 @@ public class PlayerMovement : MonoBehaviour
         horizontal = Input.GetAxis("Horizontal");
         playerRB.velocity = new Vector2 (horizontal * playerSpeed, playerSpeed);
     }
+    void OnTriggerEnter2D(Collider2D other) {
+            if(other.gameObject.tag == "enemyBullet")
+            {//only works for 1 damage bullets. refactor for charge shots
+                playerHp--;
+                Destroy(other.gameObject);
+            }
+        }
 }
 }

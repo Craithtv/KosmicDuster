@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bullet : MonoBehaviour
+public class enemyBullet : MonoBehaviour
 {
-    public Rigidbody2D bulletRB;
-    public float attackSpeed = 10f;
-    public float currentTime;
+    
+      public Rigidbody2D bulletRB;
+      public float currentTime;
       public float decayTime;
+    public float attackSpeed = 10f;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,7 @@ public class bullet : MonoBehaviour
     void Update()
     {
         currentTime += Time.deltaTime;
-        bulletRB.velocity = new Vector2(0,1) * attackSpeed;
+        bulletRB.velocity = new Vector2(0,-1) * attackSpeed;
 
         if (currentTime > decayTime)
         {
@@ -29,3 +30,4 @@ public class bullet : MonoBehaviour
         }
     }
 }
+
