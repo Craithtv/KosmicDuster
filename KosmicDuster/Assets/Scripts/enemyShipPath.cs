@@ -1,0 +1,49 @@
+using UnityEngine;
+
+public class enemyShipPath : MonoBehaviour
+{
+    public Transform[] patrolPoints;
+    int currentPoint = 0;
+    public float moveSpeed = 5;
+    public float rotationSpeed = 5; // Adjust this value to control how fast the object rotates
+    public float pointRadius = 1;
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (patrolPoints.Length == 0)
+        {
+            return; // Make sure there are patrol points before proceeding
+        }
+
+        Vector2 targetPosition = patrolPoints[currentPoint].position;
+        Vector2 currentPosition = new Vector2(transform.position.x, transform.position.y);
+
+        // Calculate the direction of movement (velocity) towards the next patrol point
+        Vector2 direction = (currentPosition - targetPosition).normalized;
+
+        // Move towards the target patrol point
+        transform.position = Vector2.MoveTowards(currentPosition, targetPosition, moveSpeed * Time.deltaTime);
+
+        // Apply rotation towards the direction of movement
+        if (direction != Vector2.zero)
+        {
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            Quaternion targetRotation = Quaternion.Euler(0, 0, angle - 90f); // Adjust -90f to handle sprite facing
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
+        }
+
+        // Check if the object has reached the target patrol point position
+        if (Vector2.Distance(currentPosition, targetPosition) <= pointRadius)
+        {
+            // Object reached the current patrol point, move to the next one
+            currentPoint++;
+
+            if (currentPoint == patrolPoints.Length)
+            {
+                // Loop back to the first patrol point if the last one is reached
+                currentPoint = 0;
+            }
+        }
+    }
+}
