@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: 1773198974204146399}
   - component: {fileID: 1773198974204146396}
   - component: {fileID: 1773198974204146398}
-  - component: {fileID: 9174070941217520569}
   - component: {fileID: 1773198974204146393}
   m_Layer: 0
   m_Name: Asteroid Sprite
@@ -163,23 +162,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2, y: 0.99730086}
   m_EdgeRadius: 0
---- !u!114 &9174070941217520569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1773198974204146395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43f14e800e701df4cb9c1393070d8c6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  droppedItemPrefab: {fileID: 7856921246630462603, guid: d829c5d58d838874ab2c6e220d823bda, type: 3}
-  lootList:
-  - {fileID: 11400000, guid: 4fc6a33ad4982234a9549dd606af7e55, type: 2}
-  - {fileID: 11400000, guid: 1c3ffa21a507bef4bae847414c20b095, type: 2}
-  - {fileID: 11400000, guid: 8a3eb336a08570b469d83f4927a2982b, type: 2}
 --- !u!50 &1773198974204146393
 Rigidbody2D:
   serializedVersion: 4

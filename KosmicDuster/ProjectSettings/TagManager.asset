@@ -7,7 +7,6 @@ TagManager:
   - bullet
   - enemyBullet
   - enemy
-  - loot
   layers:
   - Default
   - TransparentFX

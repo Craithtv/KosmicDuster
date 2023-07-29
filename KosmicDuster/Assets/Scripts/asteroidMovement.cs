@@ -26,10 +26,7 @@ public class asteroidMovement : MonoBehaviour
     private void DeathCheck()
     {
         if (enemyHp <= 0)
-        { 
-            GetComponent<lootBag>().InstantiateLoot(transform.position);
-            Destroy(this.gameObject); 
-        }
+        { Destroy(this.gameObject); }
     }
 
     void OnTriggerEnter2D(Collider2D other) {
