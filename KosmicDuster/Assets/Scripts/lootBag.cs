@@ -32,8 +32,9 @@ public class lootBag : MonoBehaviour
     {
         Loot droppedItem = GetDroppedItem();
         if (droppedItem != null)
-        {
-            GameObject lootGameObject = Instantiate(droppedItemPrefab, spawnPosition, Quaternion.identity);
+        {   
+            GameObject lootPrefab = droppedItem.lootPrefab;
+            GameObject lootGameObject = Instantiate(lootPrefab, spawnPosition, Quaternion.identity);
             lootGameObject.GetComponent<SpriteRenderer>().sprite = droppedItem.lootSprite;
 
             //add fx below like animation or particle

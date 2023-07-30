@@ -23,9 +23,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        playerHp = Mathf.Clamp(playerHp, 0, maxHealth);
         MovePlayer();
         DeathCheck();
-        playerHp = Mathf.Clamp(playerHp, 0, maxHealth);
+        
 
         if(Input.GetKeyDown(KeyCode.H))
         {
