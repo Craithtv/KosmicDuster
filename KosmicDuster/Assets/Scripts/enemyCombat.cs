@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ScoreCounter;
 
 public class enemyCombat : MonoBehaviour
 {
     [SerializeField] int enemyHp;
     public float attackRadius;
+    public ScoreManager scoreManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +24,10 @@ public class enemyCombat : MonoBehaviour
     private void DeathCheck()
     {
         if (enemyHp <= 0)
-        { Destroy(this.gameObject); }
+        {   scoreManager = FindObjectOfType<ScoreManager>();
+            scoreManager.currentScore++;
+            Destroy(this.gameObject); 
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other) {

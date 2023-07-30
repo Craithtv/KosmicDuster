@@ -7,10 +7,16 @@ public class enemyShipPath : MonoBehaviour
     public float moveSpeed = 5;
     public float rotationSpeed = 5; // Adjust this value to control how fast the object rotates
     public float pointRadius = 1;
-
+    public timeManager timeManager;
+    
+    void Start()
+    {
+        timeManager = FindObjectOfType<timeManager>();
+    }
     // Update is called once per frame
     void Update()
     {
+        
         if (patrolPoints.Length == 0)
         {
             return; // Make sure there are patrol points before proceeding

@@ -15,4 +15,4 @@ MonoBehaviour:
   lootSprite: {fileID: 21300000, guid: 13be8eeef4a40434f8eabcd4a8ea9b89, type: 3}
   lootName: clearSkies
   dropChance: 100
-  lootPrefab: {fileID: 1392797243787766954, guid: f3652ff5df438204f9b0a79d2e8bc550, type: 3}
+  lootPrefab: {fileID: 1546835418276710006, guid: 441f9a12e368108449b9b0426b4c8d9f, type: 3}

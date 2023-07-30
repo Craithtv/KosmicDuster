@@ -15,3 +15,4 @@ MonoBehaviour:
   lootSprite: {fileID: 21300000, guid: e3e9a2c482136a44bb95dc971ea101a1, type: 3}
   lootName: Extrasis
   dropChance: 100
+  lootPrefab: {fileID: 7886219106558742615, guid: 2f5c0729dbac6ca4393ea0ba5efe1438, type: 3}

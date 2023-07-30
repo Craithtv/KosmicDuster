@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ScoreCounter;
 
 namespace Movement
 {
@@ -9,8 +10,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float playerSpeed = 5f;
     Rigidbody2D playerRB;
     float horizontal;
-    public int playerHp = 10;
+    public int playerHp = 9;
     public int maxHealth = 10;
+    public ScoreManager scoreManager;
+    public GameObject aoeTrigger;
+    public int scoreBoost = 10;
 
 
     // Start is called before the first frame update
@@ -50,13 +54,29 @@ public class PlayerMovement : MonoBehaviour
             if(other.gameObject.tag == "enemyBullet")
             {//only works for 1 damage bullets. refactor for charge shots
                 playerHp--;
+                Debug.Log("hp down");
                 Destroy(other.gameObject);
             }
         
             else if (other.gameObject.tag == "enemy")
             {
+                Debug.Log("enemy ship crash");
                 playerHp--;
                 Destroy(other.gameObject);
+            }
+            else if (other.gameObject.tag == "health")
+            {
+                Debug.Log("hp up");
+                playerHp++;
+                Destroy(other.gameObject);
+            }
+            else if (other.gameObject.tag == "point")
+            {
+                scoreManager.currentScore += scoreBoost;
+                Destroy(other.gameObject);
+            }
+            else if (other.gameObject.tag == "slow"){
+                aoeTrigger.gameObject.SetActive(true);
             }
     }
 }

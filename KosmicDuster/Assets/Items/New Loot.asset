@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2948b8a18ec3c2c4baeb05bfc0b8f717, type: 3}
   m_Name: New Loot
   m_EditorClassIdentifier: 
-  lootSprite: {fileID: 0}
-  lootName: 
-  dropChance: 0
+  lootSprite: {fileID: 21300000, guid: 90464df1fe0199848b8b39409e9efff3, type: 3}
+  lootName: Flozone
+  dropChance: 100
+  lootPrefab: {fileID: 0}

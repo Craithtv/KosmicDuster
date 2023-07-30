@@ -8,6 +8,9 @@ TagManager:
   - enemyBullet
   - enemy
   - loot
+  - health
+  - point
+  - slow
   layers:
   - Default
   - TransparentFX
