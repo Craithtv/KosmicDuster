@@ -11,6 +11,7 @@ TagManager:
   - health
   - point
   - slow
+  - weapon
   layers:
   - Default
   - TransparentFX
