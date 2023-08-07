@@ -31,13 +31,14 @@ public class Shooting : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.tag == "weapon"){
-          for (int i = 0; i < weapon.Length; i++){
-            i++;
-          }
-          currentWeapon = weapon[currentWeaponIndex];
+    if (other.gameObject.tag == "weapon"){
+        currentWeaponIndex++;
+        if (currentWeaponIndex >= weapon.Length){
+            currentWeaponIndex = 0;
         }
-        
+        currentWeapon = weapon[currentWeaponIndex];
+        Destroy(other.gameObject); // Destroy the GameObject that contains the collider
     }
+}
 }
 }

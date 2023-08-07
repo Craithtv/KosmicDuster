@@ -6,6 +6,8 @@ public class bullet : MonoBehaviour
 {
     public Rigidbody2D bulletRB;
     public float attackSpeed = 10f;
+    public int xMove = 1;
+    public int yMove = -1;
     public float currentTime;
       public float decayTime;
 
@@ -21,7 +23,7 @@ public class bullet : MonoBehaviour
     void Update()
     {
         currentTime += Time.deltaTime;
-        bulletRB.velocity = new Vector2(0,1) * attackSpeed;
+        bulletRB.velocity = new Vector2(xMove, yMove) * attackSpeed;
 
         if (currentTime > decayTime)
         {
