@@ -25,7 +25,8 @@ public class Shooting : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {//this requires space to be hit everytime. refactor to hold?
 
-            Instantiate(currentWeapon, spawnPoint);
+           var weapon = Instantiate(currentWeapon, spawnPoint);
+         
             // weaponRB.AddForce(transform.forward*attackSpeed);
         }
     }

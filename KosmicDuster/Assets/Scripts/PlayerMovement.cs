@@ -78,6 +78,11 @@ public class PlayerMovement : MonoBehaviour
             else if (other.gameObject.tag == "slow"){
                 aoeTrigger.gameObject.SetActive(true);
             }
+            else if (other.gameObject.tag == "laser")
+            {
+                Debug.Log("enemy laser");
+                playerHp--;
+            }
     }
     
 }

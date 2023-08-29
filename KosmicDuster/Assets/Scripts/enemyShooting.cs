@@ -28,7 +28,8 @@ public class enemyShooting : MonoBehaviour
         
         if (currentTime > nextFire){
             nextFire += currentTime;
-            Instantiate (weapon, spawnPoint.position, weapon.transform.rotation);
+            var wep =Instantiate (weapon, spawnPoint.position, weapon.transform.rotation);
+            wep.transform.parent = gameObject.transform;
             nextFire -= currentTime;
             currentTime = 0.0f;
         }

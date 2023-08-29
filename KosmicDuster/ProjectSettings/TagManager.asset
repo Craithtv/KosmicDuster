@@ -12,6 +12,8 @@ TagManager:
   - point
   - slow
   - weapon
+  - laser
+  - bossGun
   layers:
   - Default
   - TransparentFX

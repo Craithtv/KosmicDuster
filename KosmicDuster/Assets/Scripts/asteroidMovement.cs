@@ -53,5 +53,9 @@ public class asteroidMovement : MonoBehaviour
                 enemyHp--;
                 Destroy(other.gameObject);
             }
+            if(other.gameObject.tag == "laser")
+            {//only works for 1 damage bullets. refactor for charge shots
+                enemyHp--;
+            }
         }
 }

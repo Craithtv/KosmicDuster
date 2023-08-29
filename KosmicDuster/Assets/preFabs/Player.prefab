@@ -52,7 +52,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -181,6 +181,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeed: 5
   playerHp: 10
+  maxHealth: 10
+  scoreManager: {fileID: 0}
+  aoeTrigger: {fileID: 0}
+  scoreBoost: 10
 --- !u!1 &2449666944674494746
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,5 +230,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackSpeed: 50000
-  weapon: {fileID: 2431702690463998287, guid: fa24b11613e31454bad55e5146eb52b5, type: 3}
+  weapon:
+  - {fileID: 2431702690463998287, guid: fa24b11613e31454bad55e5146eb52b5, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
   spawnPoint: {fileID: 2449666944674494749}

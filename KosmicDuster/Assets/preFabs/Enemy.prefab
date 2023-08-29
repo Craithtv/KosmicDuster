@@ -59,7 +59,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -148,6 +148,8 @@ MonoBehaviour:
   enemyHp: 1
   attackRadius: 0
   scoreManager: {fileID: 0}
+  explosionVFX: {fileID: 720882142775530776, guid: f277434039d36cf469a2cd2eba6dfdf2, type: 3}
+  currentPOS: {fileID: 2610649139082586229}
 --- !u!114 &2610649139082586231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,6 +169,7 @@ MonoBehaviour:
   moveSpeed: 5
   rotationSpeed: 5
   pointRadius: 1
+  timeManager: {fileID: 0}
 --- !u!50 &2610649139082586230
 Rigidbody2D:
   serializedVersion: 4
