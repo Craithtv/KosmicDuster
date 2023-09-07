@@ -22,6 +22,9 @@ public class enemyShipPath : MonoBehaviour
             return; // Make sure there are patrol points before proceeding
         }
 
+         if (!timeManager.isSlow)
+         {
+
         Vector2 targetPosition = patrolPoints[currentPoint].position;
         Vector2 currentPosition = new Vector2(transform.position.x, transform.position.y);
 
@@ -51,5 +54,6 @@ public class enemyShipPath : MonoBehaviour
                 currentPoint = 0;
             }
         }
+         }
     }
 }

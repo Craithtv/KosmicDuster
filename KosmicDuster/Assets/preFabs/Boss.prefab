@@ -48,6 +48,7 @@ MonoBehaviour:
   weapon: {fileID: 1392797243787766954, guid: f3652ff5df438204f9b0a79d2e8bc550, type: 3}
   nextFire: 1.5
   currentTime: 0
+  timeManager: {fileID: 0}
 --- !u!1 &8440311593867766932
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,6 +97,7 @@ MonoBehaviour:
   weapon: {fileID: 1392797243787766954, guid: f3652ff5df438204f9b0a79d2e8bc550, type: 3}
   nextFire: 1.2
   currentTime: 0
+  timeManager: {fileID: 0}
 --- !u!1 &8440311594610710543
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,7 +315,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8440311595618638694}
-  - component: {fileID: 8440311595618638695}
+  - component: {fileID: 1327976894608282836}
   m_Layer: 0
   m_Name: gun2
   m_TagString: Untagged
@@ -336,7 +338,7 @@ Transform:
   m_Father: {fileID: 8440311595032671156}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8440311595618638695
+--- !u!114 &1327976894608282836
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -345,13 +347,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 8440311595618638693}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6b81cbc08fb53c4292a39512ab6379d, type: 3}
+  m_Script: {fileID: 11500000, guid: b0610592d726e354ebafece6628bab04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 8440311595618638694}
   weapon: {fileID: 3796646373229192140, guid: 1cc1afa2cc9a3ae44b933ae0dbdef84b, type: 3}
-  nextFire: 5
+  nextFire: 3
   currentTime: 0
+  timeManager: {fileID: 0}
 --- !u!1 &8440311595808894480
 GameObject:
   m_ObjectHideFlags: 0
