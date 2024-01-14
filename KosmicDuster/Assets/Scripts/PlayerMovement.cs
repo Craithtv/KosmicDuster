@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     {
         playerRB = GetComponent<Rigidbody2D>();
         playerHp = maxHealth;
+        scoreManager = FindObjectOfType<ScoreManager>();
     }
 
     // Update is called once per frame
@@ -54,19 +55,19 @@ public class PlayerMovement : MonoBehaviour
             if(other.gameObject.tag == "enemyBullet")
             {//only works for 1 damage bullets. refactor for charge shots
                 playerHp--;
-                Debug.Log("hp down");
+                //Debug.Log("hp down");
                 Destroy(other.gameObject);
             }
         
             else if (other.gameObject.tag == "enemy")
             {
-                Debug.Log("enemy ship crash");
+                //Debug.Log("enemy ship crash");
                 playerHp--;
                 Destroy(other.gameObject);
             }
             else if (other.gameObject.tag == "health")
             {
-                Debug.Log("hp up");
+               // Debug.Log("hp up");
                 playerHp++;
                 Destroy(other.gameObject);
             }
@@ -80,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
             }
             else if (other.gameObject.tag == "laser")
             {
-                Debug.Log("enemy laser");
+                //Debug.Log("enemy laser");
                 playerHp--;
             }
     }

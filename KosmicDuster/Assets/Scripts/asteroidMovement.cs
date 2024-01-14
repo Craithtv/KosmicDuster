@@ -30,7 +30,7 @@ public class asteroidMovement : MonoBehaviour
         {rb.velocity = new Vector2(xMove, yMove) * moveSpeed;}
         if (timeManager.isSlow)
                 {
-                Debug.Log("Slow");
+                //Debug.Log("Slow");
                 rb.gravityScale = 0;
                 rb.velocity = new Vector2 (0, 0);
                 }

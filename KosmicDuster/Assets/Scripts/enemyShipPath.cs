@@ -10,9 +10,25 @@ public class enemyShipPath : MonoBehaviour
     public timeManager timeManager;
     
     void Start()
+{
+    timeManager = FindObjectOfType<timeManager>();
+    // Access the PatrolRouteManager script to get the patrol routes
+    patrolRouteManager patrolRouteManager = FindObjectOfType<patrolRouteManager>();
+    
+    if (patrolRouteManager != null)
     {
-        timeManager = FindObjectOfType<timeManager>();
+        // Randomly select a patrol route index
+        int randomRouteIndex = Random.Range(0, patrolRouteManager.patrolRoutes.Length);
+        
+        // Set the selected patrol route as the patrolPoints for this enemy ship
+        patrolPoints = patrolRouteManager.patrolRoutes[randomRouteIndex];
     }
+    else
+    {
+        Debug.LogWarning("PatrolRouteManager not found.");
+    }
+}
+
     // Update is called once per frame
     void Update()
     {

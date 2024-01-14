@@ -440,6 +440,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3375348646430081149, guid: 5fa62023b0f4bf54392fcd17f9668ace, type: 3}
+      propertyPath: targetScore
+      value: 99999
+      objectReference: {fileID: 0}
     - target: {fileID: 3531777981141771331, guid: 5fa62023b0f4bf54392fcd17f9668ace, type: 3}
       propertyPath: m_Name
       value: UI

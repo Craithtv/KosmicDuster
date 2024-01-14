@@ -21,6 +21,10 @@ public class ScoreManager : MonoBehaviour
     void Awake()
     {
         currentScore = staticScore.highScore;
+
+         Debug.Log("currentScore: " + currentScore);
+    Debug.Log("targetScore: " + targetScore);
+    Debug.Log("isBoss: " + isBoss);
         
     }
 
@@ -32,10 +36,13 @@ public class ScoreManager : MonoBehaviour
        score.text = scoreString;
        if(currentScore > targetScore && !isBoss)
        {
+        isBoss = true;
+        Debug.Log("Bool flipped");
         targetScore = 99999;
         Debug.Log("score reached");
         staticScore.highScore = currentScore;
-        isBoss = true;
+         Debug.Log("HighScore changed");
+        
         SceneManager.LoadScene("BossFight");
        }
     }

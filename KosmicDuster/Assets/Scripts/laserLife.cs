@@ -7,9 +7,9 @@ public class laserLife : MonoBehaviour
 
     public float laserTime = 3.0f;
     public float currentTime;
-    public GameObject startVFX;
-    public GameObject endVFX;
-    public Transform spawnPoint;
+    // public GameObject startVFX;
+    // public GameObject endVFX;
+    // public Transform spawnPoint;
 
 
     private List<ParticleSystem> particles = new List<ParticleSystem>();
