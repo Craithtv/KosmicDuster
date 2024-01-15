@@ -417,7 +417,7 @@ PrefabInstance:
       objectReference: {fileID: 437480115}
     - target: {fileID: 2449666944674494748, guid: e28bc00c0552ab64a802d4e27c4015cc, type: 3}
       propertyPath: weapon.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2449666944674494748, guid: e28bc00c0552ab64a802d4e27c4015cc, type: 3}
       propertyPath: weapon.Array.data[0]
@@ -426,11 +426,15 @@ PrefabInstance:
     - target: {fileID: 2449666944674494748, guid: e28bc00c0552ab64a802d4e27c4015cc, type: 3}
       propertyPath: weapon.Array.data[1]
       value: 
-      objectReference: {fileID: 1647953307}
+      objectReference: {fileID: 5937487176555769040, guid: b1f855cce9a18da4597e420c80abe7e2, type: 3}
     - target: {fileID: 2449666944674494748, guid: e28bc00c0552ab64a802d4e27c4015cc, type: 3}
       propertyPath: weapon.Array.data[2]
       value: 
-      objectReference: {fileID: 1647953307}
+      objectReference: {fileID: 6620310124093493264, guid: 1a7d19867176f6e47b42d2c5e60cea54, type: 3}
+    - target: {fileID: 2449666944674494749, guid: e28bc00c0552ab64a802d4e27c4015cc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.64
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e28bc00c0552ab64a802d4e27c4015cc, type: 3}
 --- !u!1001 &1609215633
@@ -549,17 +553,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e36b7685217314c4991a1aa523d4d26e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1647953307 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3531777981256961067, guid: 5fa62023b0f4bf54392fcd17f9668ace, type: 3}
-  m_PrefabInstance: {fileID: 1609215633}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1647953309 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3531777981256961065, guid: 5fa62023b0f4bf54392fcd17f9668ace, type: 3}
   m_PrefabInstance: {fileID: 1609215633}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1647953307}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}

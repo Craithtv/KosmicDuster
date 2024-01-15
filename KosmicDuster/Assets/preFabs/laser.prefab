@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7f1fde7d9067d2498e0761d8beccf37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserTime: 5
+  laserTime: 2
   currentTime: 0
 --- !u!1001 &2925074977238882811
 PrefabInstance:

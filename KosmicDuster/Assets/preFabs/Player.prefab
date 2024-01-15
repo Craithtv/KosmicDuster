@@ -210,7 +210,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2449666944674494746}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.02, y: 0.45, z: 0}
+  m_LocalPosition: {x: -0.03, y: 1.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -232,6 +232,9 @@ MonoBehaviour:
   attackSpeed: 50000
   weapon:
   - {fileID: 2431702690463998287, guid: fa24b11613e31454bad55e5146eb52b5, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 5937487176555769040, guid: b1f855cce9a18da4597e420c80abe7e2, type: 3}
+  - {fileID: 6620310124093493264, guid: 1a7d19867176f6e47b42d2c5e60cea54, type: 3}
   spawnPoint: {fileID: 2449666944674494749}
+  coolDown: 5
+  shotTimer: 0
+  hasShot: 0
