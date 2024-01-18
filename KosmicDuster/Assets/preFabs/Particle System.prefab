@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3017166096138636247}
   - component: {fileID: 3017166096138636244}
   - component: {fileID: 3017166096138636245}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4824,7 +4824,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3017166097487615208}
   - component: {fileID: 3017166097487615209}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Nebula Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}

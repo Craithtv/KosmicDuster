@@ -22,7 +22,6 @@ public class enemyCombat : MonoBehaviour
     void Update()
     {
         DeathCheck();
-        
 
     }
 

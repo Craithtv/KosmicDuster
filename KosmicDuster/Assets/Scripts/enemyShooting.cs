@@ -5,7 +5,7 @@ using UnityEngine;
 public class enemyShooting : MonoBehaviour
 {
     public Transform spawnPoint;
-    public GameObject weapon;
+    public GameObject weaponPrefab;
     public float nextFire = 1.0f;
     public float currentTime = 0.0f;
     public timeManager timeManager;
@@ -14,7 +14,6 @@ public class enemyShooting : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spawnPoint = this.gameObject.transform;
         timeManager = FindObjectOfType<timeManager>();
     }
 
@@ -22,18 +21,20 @@ public class enemyShooting : MonoBehaviour
     void Update()
     {
          
-         if (!timeManager.isSlow){ enemyShoot();}
+         if (!timeManager.isSlow){enemyShoot();}
        
     }
 
     public void enemyShoot(){
        
         currentTime += Time.deltaTime;
-        if (currentTime > nextFire){
-            nextFire += currentTime;
-            var wep =Instantiate (weapon, spawnPoint.position, weapon.transform.rotation);
+
+        if (currentTime >= nextFire){
+            //nextFire += currentTime;
+            GameObject bullet = Instantiate (weaponPrefab, spawnPoint.position, Quaternion.identity);
+            Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
+            bulletRb.velocity = spawnPoint.up.normalized * 10f;
             //wep.transform.parent = gameObject.transform;
-            nextFire -= currentTime;
             currentTime = 0.0f;
             
         }

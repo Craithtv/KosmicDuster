@@ -1,39 +1,29 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class enemyShipPath : MonoBehaviour
 {
-    public Transform[] patrolPoints;
+    public List<Transform> patrolPoints = new List<Transform>();
+    public Transform endPoint;
     int currentPoint = 0;
-    public float moveSpeed = 5;
+    public float moveSpeed = 3;
     public float rotationSpeed = 5; // Adjust this value to control how fast the object rotates
     public float pointRadius = 1;
     public timeManager timeManager;
+    public float pauseDuration;
     
     void Start()
 {
     timeManager = FindObjectOfType<timeManager>();
-    // Access the PatrolRouteManager script to get the patrol routes
-    patrolRouteManager patrolRouteManager = FindObjectOfType<patrolRouteManager>();
-    
-    if (patrolRouteManager != null)
-    {
-        // Randomly select a patrol route index
-        int randomRouteIndex = Random.Range(0, patrolRouteManager.patrolRoutes.Length);
-        
-        // Set the selected patrol route as the patrolPoints for this enemy ship
-        patrolPoints = patrolRouteManager.patrolRoutes[randomRouteIndex];
-    }
-    else
-    {
-        Debug.LogWarning("PatrolRouteManager not found.");
-    }
+
 }
 
     // Update is called once per frame
     void Update()
     {
         
-        if (patrolPoints.Length == 0)
+        if (patrolPoints.Count == 0)
         {
             return; // Make sure there are patrol points before proceeding
         }
@@ -64,12 +54,32 @@ public class enemyShipPath : MonoBehaviour
             // Object reached the current patrol point, move to the next one
             currentPoint++;
 
-            if (currentPoint == patrolPoints.Length)
+            if (currentPoint == patrolPoints.Count)
             {
                 // Loop back to the first patrol point if the last one is reached
-                currentPoint = 0;
+                //return;
+                StartCoroutine(shipPauses());
+
             }
         }
          }
+         
+    IEnumerator shipPauses()
+    {
+        
+        transform.rotation = Quaternion.Euler(0, 0, 0);
+        yield return new WaitForSeconds(pauseDuration);
+
+        // Add endPoint to the patrolPoints array
+    
+        patrolPoints.Add(endPoint);
+
+        // Optionally, you can add more patrol points here
+
+        // Move off screen
+        Vector3 offScreenPosition = new Vector3(transform.position.x, transform.position.y + 10f, transform.position.z);
+        transform.position = Vector3.MoveTowards(transform.position, offScreenPosition, moveSpeed * Time.deltaTime);
     }
+    }
+    
 }

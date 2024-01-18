@@ -15,7 +15,6 @@ public class bullet : MonoBehaviour
     void Start()
     {
         bulletRB = this.gameObject.GetComponent<Rigidbody2D>();
-    
         
     }
 

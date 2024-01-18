@@ -15,7 +15,7 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI score;
     public bool isBoss = false;
 
-    string scoreKey = "Score";
+    //string scoreKey = "Score";
 
     [SerializeField]
     private TextMeshProUGUI inputScore;
@@ -28,7 +28,7 @@ public class ScoreManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        currentScore = staticScore.highScore;
+        //currentScore = staticScore.highScore;
 
         Debug.Log("currentScore: " + currentScore);
         Debug.Log("targetScore: " + targetScore);
@@ -64,6 +64,7 @@ public class ScoreManager : MonoBehaviour
 
     public void SubmitScore() {
         submitScoreEvent.Invoke(inputname.text, int.Parse(inputScore.text));
+        staticScore.highScore = 0;
         //Destroy(this);
     }
 }
