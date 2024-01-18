@@ -6,8 +6,8 @@ public class bullet : MonoBehaviour
 {
     public Rigidbody2D bulletRB;
     public float attackSpeed = 10f;
-    public int xMove = 1;
-    public int yMove = -1;
+    public float xMove = 1;
+    public float yMove = -1;
     public float currentTime;
       public float decayTime;
 

@@ -12,7 +12,7 @@ public class menuButtons : MonoBehaviour
 
     public void StartButton () 
     {
-        SceneManager.LoadScene("LevelOne");
+        SceneManager.LoadScene("CraftedLevel");
     }
 
     public void SettingsButting ()

@@ -64,7 +64,7 @@ public class ScoreManager : MonoBehaviour
 
     public void SubmitScore() {
         submitScoreEvent.Invoke(inputname.text, int.Parse(inputScore.text));
-        Destroy(this);
+        //Destroy(this);
     }
 }
 }
