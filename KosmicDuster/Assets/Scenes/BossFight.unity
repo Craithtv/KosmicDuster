@@ -1920,6 +1920,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6782199698827055142, guid: 37faab4b334f7c4489ca97db18358396, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6782199699242755848, guid: 37faab4b334f7c4489ca97db18358396, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 37faab4b334f7c4489ca97db18358396, type: 3}
@@ -2005,6 +2009,10 @@ PrefabInstance:
     - target: {fileID: 2449666943256697279, guid: e28bc00c0552ab64a802d4e27c4015cc, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2449666943256697279, guid: e28bc00c0552ab64a802d4e27c4015cc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2449666943256697279, guid: e28bc00c0552ab64a802d4e27c4015cc, type: 3}
       propertyPath: m_TagString
@@ -3195,6 +3203,10 @@ PrefabInstance:
     - target: {fileID: 3017166096138636242, guid: e397ddf089e95e94d80b80014219916a, type: 3}
       propertyPath: m_Name
       value: Particle System
+      objectReference: {fileID: 0}
+    - target: {fileID: 3017166096138636242, guid: e397ddf089e95e94d80b80014219916a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3017166096138636247, guid: e397ddf089e95e94d80b80014219916a, type: 3}
       propertyPath: m_RootOrder

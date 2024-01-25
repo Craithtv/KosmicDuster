@@ -23,7 +23,7 @@ public class menuButtons : MonoBehaviour
     public void QuitButton()
     {
         areYouSure.SetActive(true);
-        //Application.Quit();
+        
     }
 
     public void InstructionPanel()
@@ -36,5 +36,11 @@ public class menuButtons : MonoBehaviour
         settings.SetActive(false);
         areYouSure.SetActive(false);
         instructions.SetActive(false);
+    }
+
+    public void ConfirmQuit()
+    {
+        Debug.Log("Confirmed Quitting");
+        Application.Quit();
     }
 }

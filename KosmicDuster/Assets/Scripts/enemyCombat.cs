@@ -10,12 +10,15 @@ public class enemyCombat : MonoBehaviour
     public ScoreManager scoreManager;
     public GameObject explosionVFX;
     public Transform currentPOS;
+
+    public GameObject soundManager;
+    public AudioClip death;
    
    
     // Start is called before the first frame update
     void Start()
     {
-    
+      
     }
 
     // Update is called once per frame
@@ -29,6 +32,7 @@ public class enemyCombat : MonoBehaviour
     {
         if (enemyHp <= 0)
         {   scoreManager = FindObjectOfType<ScoreManager>();
+            AudioSource.PlayClipAtPoint (death, transform.position);
             scoreManager.currentScore++;
             Instantiate(explosionVFX, currentPOS.position, Quaternion.identity);
             Destroy(this.gameObject); 

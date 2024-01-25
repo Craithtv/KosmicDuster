@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+//using System.Diagnostics;
 using UnityEngine;
 
 public class enemyShipPath : MonoBehaviour
@@ -56,6 +57,7 @@ public class enemyShipPath : MonoBehaviour
 
             if (currentPoint == patrolPoints.Count)
             {
+                Debug.Log("Patrol Point Count Reached");
                 // Loop back to the first patrol point if the last one is reached
                 //return;
                 StartCoroutine(shipPauses());
@@ -68,7 +70,9 @@ public class enemyShipPath : MonoBehaviour
     {
         
         transform.rotation = Quaternion.Euler(0, 0, 0);
+        Debug.Log("Rotation Zeroed");
         yield return new WaitForSeconds(pauseDuration);
+        Debug.Log("Waited");
 
         // Add endPoint to the patrolPoints array
     
