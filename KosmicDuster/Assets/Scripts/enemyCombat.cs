@@ -39,8 +39,8 @@ public class enemyCombat : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other) {
-            if(other.gameObject.tag == "bullet")
+    void OnCollisionEnter2D(Collision2D other) {
+        if(other.gameObject.tag == "bullet")
             {//only works for 1 damage bullets. refactor for charge shots
                 enemyHp--;
                 Destroy(other.gameObject);
@@ -49,6 +49,7 @@ public class enemyCombat : MonoBehaviour
             {//only works for 1 damage bullets. refactor for charge shots
                 enemyHp--;
             }
-        }
+        
+    }
 
     }

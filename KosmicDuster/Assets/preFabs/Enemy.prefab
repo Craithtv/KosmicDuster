@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 2610649139082586230}
   - component: {fileID: 3713445654383105681}
   - component: {fileID: 4664700613191482714}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Enemy
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.018709302}
@@ -249,6 +249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 6120431809563496230}
+  inRange: 0
   weaponPrefab: {fileID: 1392797243787766954, guid: f3652ff5df438204f9b0a79d2e8bc550, type: 3}
   nextFire: 1
   currentTime: 0
@@ -264,6 +265,7 @@ GameObject:
   - component: {fileID: 936268555299614992}
   - component: {fileID: 128540757623575028}
   - component: {fileID: 8989679213254462934}
+  - component: {fileID: 7354884084381236866}
   m_Layer: 0
   m_Name: spaceBuffer
   m_TagString: Untagged
@@ -279,7 +281,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2934896597611238647}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -299,9 +301,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.038335323, y: 0}
+  m_Offset: {x: -0.038334846, y: -1.5699072}
   serializedVersion: 2
-  m_Radius: 1.2147107
+  m_Radius: 2.784618
 --- !u!114 &8989679213254462934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,3 +317,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 2610649139082586230}
+--- !u!114 &7354884084381236866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2934896597611238647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0e906ec3028ff742be443dbad236d09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 2610649139082586224}

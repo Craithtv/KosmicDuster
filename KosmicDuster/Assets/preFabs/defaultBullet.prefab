@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5407255105617749377}
   - component: {fileID: 581404260391390628}
   - component: {fileID: 5802784783277770802}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: defaultBullet
   m_TagString: bullet
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

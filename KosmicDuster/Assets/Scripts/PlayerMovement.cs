@@ -58,13 +58,7 @@ public class PlayerMovement : MonoBehaviour
                 //Debug.Log("hp down");
                 Destroy(other.gameObject);
             }
-        
-            else if (other.gameObject.tag == "enemy")
-            {
-                //Debug.Log("enemy ship crash");
-                playerHp--;
-                Destroy(other.gameObject);
-            }
+    
             else if (other.gameObject.tag == "health")
             {
                // Debug.Log("hp up");
@@ -83,6 +77,15 @@ public class PlayerMovement : MonoBehaviour
             {
                 //Debug.Log("enemy laser");
                 playerHp--;
+            }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other) {
+         if (other.gameObject.tag == "enemy")
+            {
+                //Debug.Log("enemy ship crash");
+                playerHp--;
+                Destroy(other.gameObject);
             }
     }
     

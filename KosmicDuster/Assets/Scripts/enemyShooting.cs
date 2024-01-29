@@ -5,6 +5,7 @@ using UnityEngine;
 public class enemyShooting : MonoBehaviour
 {
     public Transform spawnPoint;
+    public bool inRange = false;
     public GameObject weaponPrefab;
     public float nextFire = 1.0f;
     public float currentTime = 0.0f;
@@ -21,7 +22,7 @@ public class enemyShooting : MonoBehaviour
     void Update()
     {
          
-         if (!timeManager.isSlow){enemyShoot();}
+         if (!timeManager.isSlow && inRange == true){enemyShoot();}
        
     }
 
