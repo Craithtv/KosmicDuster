@@ -202,7 +202,7 @@ MonoBehaviour:
   rotationSpeed: 5
   pointRadius: 1
   timeManager: {fileID: 0}
-  pauseDuration: 0
+  pauseDuration: 3
 --- !u!50 &2610649139082586230
 Rigidbody2D:
   serializedVersion: 4
@@ -263,10 +263,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 936268555299614992}
-  - component: {fileID: 128540757623575028}
   - component: {fileID: 8989679213254462934}
   - component: {fileID: 7354884084381236866}
-  m_Layer: 0
+  - component: {fileID: 356733584822431415}
+  m_Layer: 3
   m_Name: spaceBuffer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,29 +281,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2934896597611238647}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.27, z: 0}
+  m_LocalPosition: {x: 0, y: 0.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2610649139082586229}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &128540757623575028
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2934896597611238647}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.038334846, y: -1.5699072}
-  serializedVersion: 2
-  m_Radius: 2.784618
 --- !u!114 &8989679213254462934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,3 +314,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 2610649139082586224}
+--- !u!70 &356733584822431415
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2934896597611238647}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00000047683716, y: -2.2171237}
+  m_Size: {x: 2.1124544, y: 5.4342475}
+  m_Direction: 0

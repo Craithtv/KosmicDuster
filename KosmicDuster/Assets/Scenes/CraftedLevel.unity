@@ -1607,7 +1607,7 @@ PrefabInstance:
       objectReference: {fileID: 244044379}
     - target: {fileID: 2610649139082586231, guid: d467887df3501d74dbc3d5db56cc0728, type: 3}
       propertyPath: pauseDuration
-      value: 60
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2610649139082586231, guid: d467887df3501d74dbc3d5db56cc0728, type: 3}
       propertyPath: patrolPoints.Array.data[0]
@@ -1745,7 +1745,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1361236608}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.6185713, y: -0.99018717, z: -0.12817037}
+  m_LocalPosition: {x: 3.6185713, y: -0.99018717, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
